@@ -5,8 +5,8 @@ import { FadeIn } from "@/components/ui/fade-in";
 
 const concepts = [
   {
-    title: "스토리 기반 뉴스",
-    desc: "판타지 소설처럼 읽히는 뉴스 속에 투자 단서가 숨어있다. 여행일지와 속보를 교차하며 진실을 추적하라.",
+    title: "여행자의 이야기",
+    desc: "감정사 카이와 동료들이 대륙을 여행한다. 그들의 일지 속에 시장을 움직일 단서가 숨어있다.",
     gradient: "from-indigo-500/20 to-purple-600/5",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.5}>
@@ -51,10 +51,10 @@ export function ConceptSection() {
     <section className="mx-auto max-w-6xl px-6 py-28">
       <FadeIn>
         <h2 className="mb-4 text-center text-2xl font-bold sm:text-3xl">
-          마도거래소는 이런 곳이다
+          이곳에서 당신은 분석가가 된다
         </h2>
         <p className="mb-14 text-center text-sm text-text-secondary">
-          금융을 공부가 아닌 플레이 경험으로 전환한다
+          소설을 읽듯 뉴스를 읽고, 누구보다 빠르게 시장을 읽어라
         </p>
       </FadeIn>
       <div className="grid items-stretch gap-5 sm:grid-cols-2">

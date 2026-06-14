@@ -3,10 +3,10 @@
 import { FadeIn } from "@/components/ui/fade-in";
 
 const steps = [
-  { num: "01", label: "뉴스 발행", desc: "여행일지 + 속보가 도착한다" },
-  { num: "02", label: "단서 해석", desc: "숨겨진 투자 단서를 찾아라" },
-  { num: "03", label: "예측 & 매매", desc: "방향을 예측하고 포지션을 잡아라" },
-  { num: "04", label: "결과 확인", desc: "적중 여부 + 수익률 + 랭킹" },
+  { num: "01", label: "소식 도착", desc: "카이 일행의 여행일지와 마도통신 속보가 발행된다" },
+  { num: "02", label: "단서 해석", desc: "공식 발표와 현장의 이야기가 다르다. 진실은 무엇인가?" },
+  { num: "03", label: "판단과 매매", desc: "종목의 방향을 예측하고, 확신하면 포지션을 잡아라" },
+  { num: "04", label: "결과 확인", desc: "다음 뉴스에서 답이 밝혀진다. 당신의 분석은 맞았는가?" },
 ];
 
 export function GameplaySection() {
@@ -15,7 +15,7 @@ export function GameplaySection() {
       <div className="mx-auto max-w-4xl">
         <FadeIn>
           <h2 className="mb-14 text-center text-2xl font-bold sm:text-3xl">
-            하루의 플레이 루프
+            매일 아침, 대륙에서 소식이 도착한다
           </h2>
         </FadeIn>
         <div className="relative">

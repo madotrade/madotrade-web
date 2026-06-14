@@ -18,7 +18,7 @@ export function HeroSection() {
         className="relative z-10 flex flex-col items-center"
       >
         <span className="mb-6 inline-block rounded-full border border-border bg-bg-card/50 px-4 py-1.5 text-xs tracking-wider text-accent-light">
-          시즌형 모의투자 서비스
+          아르카 대륙의 투자 길드에 오신 것을 환영합니다
         </span>
 
         <TextGenerateEffect
@@ -32,9 +32,9 @@ export function HeroSection() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-6 max-w-md text-base text-text-secondary sm:text-lg"
         >
-          역사적 경제 사건을 판타지 세계관으로 체험하는
+          대륙에 위기가 닥치고 있다.
           <br className="hidden sm:block" />
-          분석력 중심 경쟁 서비스
+          여행자의 이야기 속에서 진실을 찾아라.
         </motion.p>
 
         <motion.div

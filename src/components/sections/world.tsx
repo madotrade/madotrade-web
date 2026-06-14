@@ -48,10 +48,10 @@ export function WorldSection() {
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <h2 className="mb-3 text-center text-2xl font-bold sm:text-3xl">
-            4개 종족이 경쟁하는 대륙
+            아르카 대륙, 4개 종족의 균형
           </h2>
           <p className="mb-14 text-center text-sm text-text-secondary">
-            종족 간의 이해관계가 시장을 만든다. 뉴스 하나가 대륙 전체를 뒤흔든다.
+            마법석을 둘러싼 이해관계가 대륙의 시장을 만든다. 균형은 언제든 무너질 수 있다.
           </p>
         </FadeIn>
 
