@@ -35,7 +35,7 @@ const characters = [
     name: "셀레나",
     role: "정령술사 겸 학자",
     tribe: "엘프 연합",
-    quote: "이 지역 마나 밀도가 3년 전부터 줄고 있어.",
+    quote: "이 일대 마나 흐름이 이상해.",
     color: "from-emerald-400/20 to-teal-500/10",
     accent: "text-emerald-400",
     image: "/characters/selena.png",
@@ -68,14 +68,14 @@ export function CharacterSection() {
           {characters.map((c, i) => (
             <FadeIn key={c.name} delay={i * 0.08} className="flex">
               <Spotlight className="flex flex-1">
-                <div className="relative flex-1 overflow-hidden rounded-xl border border-border bg-bg-card transition-all duration-200 hover:border-accent/30 hover:-translate-y-1">
+                <div className="relative flex-1 overflow-hidden rounded-xl border border-border bg-bg-card transition-all duration-200 hover:border-accent/30 hover:-translate-y-1 group">
                   <div className="relative h-48 w-full overflow-hidden sm:h-56">
                     <img
                       src={c.image}
                       alt={c.name}
-                      className="h-full w-full object-cover object-top"
+                      className="h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-card via-bg-card/20 to-transparent" />
                   </div>
                   <div className="relative z-10 px-4 pb-4 pt-2">
                     <h3 className={`text-base font-bold ${c.accent}`}>{c.name}</h3>
