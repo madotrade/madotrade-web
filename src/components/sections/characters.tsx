@@ -79,7 +79,7 @@ export function CharacterSection() {
         </FadeIn>
 
         {/* 가로 아코디언 — 데스크탑 */}
-        <div className="hidden lg:flex h-[380px] gap-2 rounded-2xl overflow-hidden border border-border">
+        <div className="hidden lg:flex h-[520px] gap-2 rounded-2xl overflow-hidden border border-border">
           {characters.map((c, i) => (
             <motion.div
               key={c.name}
