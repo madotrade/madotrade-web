@@ -56,12 +56,12 @@ export function WorldSection() {
         </FadeIn>
 
         {/* 그리드 - 모바일은 2열, 데스크탑 4열 */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 items-stretch gap-4 lg:grid-cols-4">
           {nations.map((n, i) => (
-            <FadeIn key={n.name} delay={i * 0.1} className="h-full">
-              <Spotlight className="h-full">
+            <FadeIn key={n.name} delay={i * 0.1} className="flex">
+              <Spotlight className="flex flex-1">
                 <div
-                  className={`relative h-full rounded-xl border border-border bg-bg-card transition-all duration-200 ${n.borderColor} hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20`}
+                  className={`relative flex-1 rounded-xl border border-border bg-bg-card transition-all duration-200 ${n.borderColor} hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20`}
                 >
                   {/* 배경 그라데이션 */}
                   <div className={`absolute inset-0 rounded-xl bg-gradient-to-b ${n.color}`} />

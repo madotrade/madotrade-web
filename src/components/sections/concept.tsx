@@ -57,11 +57,11 @@ export function ConceptSection() {
           금융을 공부가 아닌 플레이 경험으로 전환한다
         </p>
       </FadeIn>
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid items-stretch gap-5 sm:grid-cols-2">
         {concepts.map((c, i) => (
-          <FadeIn key={c.title} delay={i * 0.1} className="h-full">
-            <Spotlight className="h-full">
-              <div className={`relative h-full overflow-hidden rounded-xl border border-border bg-bg-card p-7 transition-colors hover:border-accent/30`}>
+          <FadeIn key={c.title} delay={i * 0.1} className="flex">
+            <Spotlight className="flex flex-1">
+              <div className={`relative flex-1 overflow-hidden rounded-xl border border-border bg-bg-card p-7 transition-colors hover:border-accent/30`}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${c.gradient} opacity-60`} />
                 <div className="relative z-10">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-bg-primary/80 text-accent-light">
