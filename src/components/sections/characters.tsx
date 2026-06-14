@@ -103,8 +103,8 @@ export function CharacterSection() {
                 src={active === i ? c.expanded : c.collapsed}
                 alt={c.name}
                 className={cn(
-                  "absolute inset-0 h-full w-full object-cover object-center transition-all duration-500",
-                  active === i ? "opacity-100" : "opacity-40"
+                  "absolute inset-0 h-full w-full transition-all duration-500",
+                  active === i ? "object-contain opacity-100" : "object-cover object-top opacity-40"
                 )}
               />
               
