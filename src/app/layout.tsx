@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 
-const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "마도거래소 | 뉴스를 읽고, 시장을 예측하라",
@@ -21,8 +25,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ko" className={`${geist.variable} antialiased`}>
-      <body className="min-h-screen bg-bg-primary text-text-primary">
+    <html lang="ko" className={`${inter.variable} antialiased`}>
+      <body className="min-h-screen bg-bg-primary text-text-primary font-['Pretendard_Variable',sans-serif]">
         {children}
       </body>
     </html>
