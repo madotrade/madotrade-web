@@ -112,7 +112,7 @@ export function CharacterSection() {
               <div className={cn(
                 "absolute inset-0 transition-all duration-500",
                 active === i 
-                  ? "bg-gradient-to-t from-black/90 via-black/40 to-transparent" 
+                  ? "bg-gradient-to-t from-black/80 via-transparent to-transparent" 
                   : "bg-bg-primary/60"
               )} />
 
