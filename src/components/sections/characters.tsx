@@ -89,10 +89,10 @@ export function CharacterSection() {
             <motion.div
               key={c.name}
               className={cn(
-                "relative cursor-pointer overflow-hidden rounded-2xl border border-border",
+                "relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-bg-primary",
               )}
               animate={{ 
-                flex: active === i ? 2.5 : 1,
+                flex: active === i ? 1.8 : 1,
                 height: active === i ? 640 : 320,
               }}
               transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
