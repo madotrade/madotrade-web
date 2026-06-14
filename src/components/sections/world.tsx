@@ -1,44 +1,40 @@
 "use client";
 
 import { FadeIn } from "@/components/ui/fade-in";
-import { Spotlight } from "@/components/ui/spotlight";
+import { motion } from "motion/react";
 
 const nations = [
   {
     name: "드래곤 제국",
     territory: "북부 대륙",
     industries: ["마법석 정제", "마도 통신"],
-    color: "from-red-500/20 via-orange-500/10 to-transparent",
-    borderColor: "hover:border-red-500/40",
-    accentText: "text-red-400",
-    desc: "막대한 마법석 매장량과 통신 기술로 대륙의 패권을 쥐고 있다. 그러나 최근 광맥에서 이상 징후가 보고되고 있다.",
+    desc: "막대한 마법석 매장량과 통신 기술로 대륙의 패권을 쥐고 있다.",
+    image: "/worlds/dragon.png",
+    borderColor: "hover:border-blue-500/50",
   },
   {
     name: "엘프 연합",
     territory: "서부 삼림",
     industries: ["신목 농업", "정령 에너지"],
-    color: "from-emerald-500/20 via-green-500/10 to-transparent",
-    borderColor: "hover:border-emerald-500/40",
-    accentText: "text-emerald-400",
-    desc: "정령과의 계약을 통해 자연 에너지를 추출한다. 마법석 의존도가 낮아 위기에 강하다는 평가를 받는다.",
+    desc: "정령과의 계약을 통해 자연 에너지를 추출한다. 마법석 의존도가 낮다.",
+    image: "/worlds/elf.png",
+    borderColor: "hover:border-emerald-500/50",
   },
   {
     name: "드워프 자치령",
-    territory: "중앙 산맥",
+    territory: "중앙 산맥 지하",
     industries: ["광산 조합", "무기 대장간"],
-    color: "from-amber-500/20 via-yellow-500/10 to-transparent",
-    borderColor: "hover:border-amber-500/40",
-    accentText: "text-amber-400",
-    desc: "지하 깊은 곳에서 희귀 광물을 채굴하며, 대륙 최고의 무기를 단조한다. 자원 가격에 민감하게 반응한다.",
+    desc: "마법석 80%를 산출하는 과점 세력. 가격 결정권을 쥐고 있다.",
+    image: "/worlds/dwarf.png",
+    borderColor: "hover:border-amber-500/50",
   },
   {
     name: "용린 왕국",
-    territory: "동부 평원",
+    territory: "동부 해안",
     industries: ["마수 운송", "연금술 공방"],
-    color: "from-blue-500/20 via-indigo-500/10 to-transparent",
-    borderColor: "hover:border-blue-500/40",
-    accentText: "text-blue-400",
-    desc: "길들인 마수로 대륙 물류를 지배한다. 연금술 기반 신소재 개발에 막대한 투자를 이어가고 있다.",
+    desc: "마수를 길들여 대륙 물류를 지배한다. 마법석 전량 수입 의존.",
+    image: "/worlds/yongrin.png",
+    borderColor: "hover:border-indigo-500/50",
   },
 ];
 
@@ -55,45 +51,49 @@ export function WorldSection() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-2 items-stretch gap-4 lg:grid-cols-4">
+        <div className="flex flex-col gap-4">
           {nations.map((n, i) => (
-            <FadeIn key={n.name} delay={i * 0.1} className="flex">
-              <Spotlight className="flex flex-1">
-                <div
-                  className={`relative flex-1 rounded-xl border border-border bg-bg-card transition-all duration-200 ${n.borderColor} hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20`}
-                >
-                  <div className={`absolute inset-0 rounded-xl bg-gradient-to-b ${n.color}`} />
-                  <div className="relative z-10 p-5">
-                    <span className={`text-[11px] font-semibold ${n.accentText}`}>
-                      {n.territory}
-                    </span>
-                    <h3 className="mt-1.5 text-sm font-bold text-text-primary sm:text-base">
-                      {n.name}
-                    </h3>
-                    <div className="mt-2 flex flex-wrap gap-1.5">
+            <FadeIn key={n.name} delay={i * 0.1}>
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                className={`group relative overflow-hidden rounded-xl border border-border transition-all duration-300 ${n.borderColor}`}
+              >
+                {/* 배경 이미지 */}
+                <div className="absolute inset-0">
+                  <img
+                    src={n.image}
+                    alt={n.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-bg-primary/90 via-bg-primary/60 to-transparent" />
+                </div>
+
+                {/* 콘텐츠 */}
+                <div className="relative z-10 flex items-center gap-4 p-5 sm:p-6">
+                  <div className="flex-1">
+                    <p className="text-[11px] font-semibold text-text-muted">{n.territory}</p>
+                    <h3 className="mt-1 text-lg font-bold text-text-primary sm:text-xl">{n.name}</h3>
+                    <p className="mt-1.5 text-xs text-text-secondary">{n.desc}</p>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
                       {n.industries.map((ind) => (
                         <span
                           key={ind}
-                          className="rounded-md bg-bg-primary/60 px-2 py-0.5 text-[10px] text-text-muted"
+                          className="rounded-md border border-border bg-bg-primary/60 px-2 py-0.5 text-[10px] text-text-muted backdrop-blur-sm"
                         >
                           {ind}
                         </span>
                       ))}
                     </div>
-                    <p className="mt-3 text-xs leading-relaxed text-text-secondary">
-                      {n.desc}
-                    </p>
                   </div>
                 </div>
-              </Spotlight>
+              </motion.div>
             </FadeIn>
           ))}
         </div>
 
-        {/* 시즌 1 티저 - 현실 모티브 숨김, 세계관 서사로만 */}
         <FadeIn delay={0.4}>
-          <div className="mt-14 overflow-hidden rounded-xl border border-border bg-bg-card">
-            <div className="relative px-6 py-6 sm:px-8">
+          <div className="mt-12 overflow-hidden rounded-xl border border-border bg-bg-card">
+            <div className="relative px-6 py-5 sm:px-8">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-accent-light/5" />
               <div className="relative z-10 flex flex-col items-center gap-3 text-center sm:flex-row sm:text-left">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/30 bg-bg-primary text-accent-light">
