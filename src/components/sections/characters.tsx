@@ -84,7 +84,7 @@ export function CharacterSection() {
         </FadeIn>
 
         {/* 가로 아코디언 — 데스크탑 */}
-        <div className="hidden lg:flex h-[420px] gap-2 items-center">
+        <div className="hidden lg:flex h-[320px] gap-2 items-center">
           {characters.map((c, i) => (
             <motion.div
               key={c.name}
@@ -93,7 +93,7 @@ export function CharacterSection() {
               )}
               animate={{ 
                 flex: active === i ? 2.5 : 1,
-                height: active === i ? 520 : 420,
+                height: active === i ? 640 : 320,
               }}
               transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
               onMouseEnter={() => setActive(i)}
