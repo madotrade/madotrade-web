@@ -35,8 +35,8 @@ const concepts = [
     ),
   },
   {
-    title: "역사를 플레이하라",
-    desc: "오일쇼크, 닷컴버블, 아시아 금융위기… 실제 경제사 20~30시즌 분량을 판타지로 체험.",
+    title: "역사는 반복된다",
+    desc: "매 시즌 새로운 사건이 대륙을 뒤흔든다. 시즌이 끝나면 그 사건의 정체가 밝혀진다. 20개 이상의 시즌이 당신을 기다리고 있다.",
     gradient: "from-emerald-500/15 to-teal-600/5",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.5}>
