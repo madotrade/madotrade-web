@@ -15,8 +15,8 @@ const concepts = [
     ),
   },
   {
-    title: "분석력 = 실력",
-    desc: "운이 아닌 해석력이 승부를 결정한다. 확률형 요소 없음, 배율 베팅 없음. 순수 분석력 경쟁.",
+    title: "분석력이 곧 실력",
+    desc: "찍어서 맞출 수 없다. 뉴스를 읽고, 맥락을 잇고, 판단을 내려야 한다. 운이 끼어들 틈은 없다.",
     gradient: "from-violet-500/20 to-fuchsia-600/5",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.5}>
@@ -25,8 +25,8 @@ const concepts = [
     ),
   },
   {
-    title: "시즌 경쟁",
-    desc: "2달 단위 시즌. 수익률과 예측 적중률로 랭킹을 겨뤄라. 시즌 종료 시 분석 리포트 발급.",
+    title: "시즌마다 새 판이 열린다",
+    desc: "2달간의 경쟁. 시즌이 끝나면 수익률과 적중률로 순위가 매겨진다. 당신의 분석 리포트가 발급된다.",
     gradient: "from-amber-500/15 to-orange-600/5",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.5}>
@@ -35,8 +35,8 @@ const concepts = [
     ),
   },
   {
-    title: "역사는 반복된다",
-    desc: "매 시즌 새로운 사건이 대륙을 뒤흔든다. 시즌이 끝나면 그 사건의 정체가 밝혀진다. 20개 이상의 시즌이 당신을 기다리고 있다.",
+    title: "시즌이 끝나면 진실이 밝혀진다",
+    desc: "매 시즌, 대륙을 뒤흔드는 사건의 정체는 감춰져 있다. 끝까지 플레이한 자만이 전모를 알게 된다.",
     gradient: "from-emerald-500/15 to-teal-600/5",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth={1.5}>
