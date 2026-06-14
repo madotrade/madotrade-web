@@ -84,15 +84,17 @@ export function CharacterSection() {
         </FadeIn>
 
         {/* 가로 아코디언 — 데스크탑 */}
-        <div className="hidden lg:flex h-[520px] gap-2 rounded-2xl overflow-hidden border border-border">
+        <div className="hidden lg:flex h-[420px] gap-2 items-center">
           {characters.map((c, i) => (
             <motion.div
               key={c.name}
               className={cn(
-                "relative cursor-pointer overflow-hidden transition-colors",
-                active === i ? "border-r border-border" : ""
+                "relative cursor-pointer overflow-hidden rounded-2xl border border-border",
               )}
-              animate={{ flex: active === i ? 2.5 : 1 }}
+              animate={{ 
+                flex: active === i ? 2.5 : 1,
+                height: active === i ? 520 : 420,
+              }}
               transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
               onMouseEnter={() => setActive(i)}
             >
