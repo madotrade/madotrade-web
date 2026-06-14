@@ -36,7 +36,7 @@ export function CTASection() {
           transition={{ delay: 0.5 }}
           className="mt-6 text-[11px] text-text-muted"
         >
-          출시 시 알림을 보내드립니다 · 무료
+          시즌 1 오픈 시 가장 먼저 알려드립니다
         </motion.p>
       </FadeIn>
     </section>
