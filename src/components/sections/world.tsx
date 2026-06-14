@@ -7,7 +7,7 @@ const nations = [
   {
     name: "드래곤 제국",
     industry: "마법석 정제 · 마도 통신",
-    motif: "반도체 · IT",
+    tag: "대륙 패권국",
     color: "from-red-500/20 via-orange-500/10 to-transparent",
     borderColor: "hover:border-red-500/40",
     accentText: "text-red-400",
@@ -16,7 +16,7 @@ const nations = [
   {
     name: "엘프 연합",
     industry: "신목 농업 · 정령 에너지",
-    motif: "농업/식품 · 에너지",
+    tag: "자연 수호자",
     color: "from-emerald-500/20 via-green-500/10 to-transparent",
     borderColor: "hover:border-emerald-500/40",
     accentText: "text-emerald-400",
@@ -25,7 +25,7 @@ const nations = [
   {
     name: "드워프 자치령",
     industry: "광산 조합 · 무기 대장간",
-    motif: "자원/광업 · 방산",
+    tag: "지하 장인",
     color: "from-amber-500/20 via-yellow-500/10 to-transparent",
     borderColor: "hover:border-amber-500/40",
     accentText: "text-amber-400",
@@ -34,7 +34,7 @@ const nations = [
   {
     name: "용린 왕국",
     industry: "마수 운송 · 연금술 공방",
-    motif: "제조/운송 · 화학",
+    tag: "물류의 지배자",
     color: "from-blue-500/20 via-indigo-500/10 to-transparent",
     borderColor: "hover:border-blue-500/40",
     accentText: "text-blue-400",
@@ -67,8 +67,8 @@ export function WorldSection() {
                   <div className={`absolute inset-0 rounded-xl bg-gradient-to-b ${n.color}`} />
 
                   <div className="relative z-10 p-5">
-                    <span className={`font-[family-name:var(--font-inter)] text-[11px] font-bold tracking-wider ${n.accentText}`}>
-                      {n.motif}
+                    <span className={`text-[11px] font-semibold tracking-wider ${n.accentText}`}>
+                      {n.tag}
                     </span>
                     <h3 className="mt-2 text-sm font-semibold text-text-primary sm:text-base">
                       {n.name}
