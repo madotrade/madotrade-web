@@ -79,7 +79,7 @@ export function CharacterSection() {
         </FadeIn>
 
         {/* 가로 아코디언 — 데스크탑 */}
-        <div className="hidden lg:flex h-[560px] gap-2 rounded-2xl overflow-hidden border border-border">
+        <div className="hidden lg:flex h-[380px] gap-2 rounded-2xl overflow-hidden border border-border">
           {characters.map((c, i) => (
             <motion.div
               key={c.name}
@@ -87,7 +87,7 @@ export function CharacterSection() {
                 "relative cursor-pointer overflow-hidden transition-colors",
                 active === i ? "border-r border-border" : ""
               )}
-              animate={{ flex: active === i ? 4 : 1 }}
+              animate={{ flex: active === i ? 2.5 : 1 }}
               transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
               onMouseEnter={() => setActive(i)}
             >
@@ -96,8 +96,8 @@ export function CharacterSection() {
                 src={c.image}
                 alt={c.name}
                 className={cn(
-                  "absolute inset-0 h-full w-full object-cover transition-all duration-500",
-                  active === i ? "object-top opacity-100 scale-105" : "object-center opacity-60 scale-100"
+                  "absolute inset-0 h-full w-full object-cover object-center transition-all duration-500",
+                  active === i ? "opacity-100 scale-100" : "opacity-40 scale-100"
                 )}
               />
               
